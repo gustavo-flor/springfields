@@ -31,7 +31,8 @@ public class Query {
     }
 
     public MappingJacksonValue filter(final User user) {
-        return getMappingJacksonValue(UserPayload.of(user));
+        final var payload = UserPayload.of(user).wrap();
+        return getMappingJacksonValue(payload);
     }
 
     public MappingJacksonValue filter(final List<User> users) {

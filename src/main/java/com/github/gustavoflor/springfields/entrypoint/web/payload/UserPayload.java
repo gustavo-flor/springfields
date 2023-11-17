@@ -20,4 +20,8 @@ public record UserPayload(Long id,
             .build();
     }
 
+    public UserDataPayload wrap() {
+        return new UserDataPayload(this);
+    }
+
 }

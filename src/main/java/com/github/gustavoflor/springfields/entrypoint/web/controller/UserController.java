@@ -3,6 +3,7 @@ package com.github.gustavoflor.springfields.entrypoint.web.controller;
 import com.github.gustavoflor.springfields.core.UserService;
 import com.github.gustavoflor.springfields.entrypoint.web.Query;
 import com.github.gustavoflor.springfields.entrypoint.web.SearchQuery;
+import com.github.gustavoflor.springfields.entrypoint.web.payload.UserDataPayload;
 import com.github.gustavoflor.springfields.entrypoint.web.payload.UserPayload;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -46,7 +47,7 @@ public class UserController {
         responses = {
             @ApiResponse(
                 responseCode = "200",
-                content = @Content(schema = @Schema(implementation = UserPayload.class))
+                content = @Content(schema = @Schema(implementation = UserDataPayload.class))
             )
         }
     )
